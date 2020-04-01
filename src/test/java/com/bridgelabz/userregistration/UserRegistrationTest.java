@@ -28,4 +28,16 @@ public class UserRegistrationTest {
         UserRegistration userRegistration = new UserRegistration();
         Assert.assertFalse(userRegistration.checkName("la"));
     }
+
+    @Test
+    public void givenValidEmail_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkEmail("abc+123@gmail.com.in"));
+    }
+
+    @Test
+    public void givenInvalidEmail_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkEmail("1abc.abc@gmail.com"));
+    }
 }
