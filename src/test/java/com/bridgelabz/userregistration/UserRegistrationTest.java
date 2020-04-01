@@ -56,13 +56,13 @@ public class UserRegistrationTest {
     @Test
     public void givenValidPassword_shouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        Assert.assertTrue(userRegistration.checkPassword("1234567A"));
+        Assert.assertTrue(userRegistration.checkPassword("1@234567A"));
     }
 
     @Test
     public void givenInvalidPassword_shouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        Assert.assertFalse(userRegistration.checkPassword("163A"));
+        Assert.assertFalse(userRegistration.checkPassword("1@#qweq63A"));
     }
 
 }
