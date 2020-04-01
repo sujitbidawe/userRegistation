@@ -53,4 +53,16 @@ public class UserRegistrationTest {
         Assert.assertFalse(userRegistration.checkMobile("1763 1231231231"));
     }
 
+    @Test
+    public void givenValidPassword_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkPassword("776asd%^&"));
+    }
+
+    @Test
+    public void givenInvalidPassword_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkPassword("1763 1231231231"));
+    }
+
 }
