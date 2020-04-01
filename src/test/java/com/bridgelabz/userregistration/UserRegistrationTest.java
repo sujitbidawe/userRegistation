@@ -16,4 +16,16 @@ public class UserRegistrationTest {
         UserRegistration userRegistration = new UserRegistration();
         Assert.assertFalse(userRegistration.checkName("fi"));
     }
+
+    @Test
+    public void givenValidLastName_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkName("Last"));
+    }
+
+    @Test
+    public void givenInvalidLastName_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkName("la"));
+    }
 }
